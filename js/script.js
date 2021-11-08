@@ -112,3 +112,20 @@ const cards = [
 		color: 'blue'
 	}
 ];
+
+// milestone1
+
+getCards();
+
+function getCards(){
+	const card = document.querySelector('main');
+
+	cards.forEach((element,index)=>{
+		card.innerHTML += `
+		<div class="card">
+			<i class="${element.family} ${element.prefix}${element.name} ${element.color}"></i>
+			<span>${element.name}</span>
+    </div>
+		`
+	})
+}
